@@ -77,8 +77,8 @@ public class PlayerMovement : MonoBehaviour
 
         gravity(2);
 
-        Debug.Log(jumped);
-        Debug.Log(jumpTimer);
+        //Debug.Log(jumped);
+        //Debug.Log(jumpTimer);
     }
 
     //--------------------------------------------------------------------------------------------------------------------------
