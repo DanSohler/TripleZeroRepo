@@ -15,9 +15,9 @@ public class PlayerMovement : MonoBehaviour
     //jump key
     [SerializeField]
     KeyCode jump = KeyCode.W;
-    //wall climb key
+    //interact key
     [SerializeField]
-    KeyCode wallGrab = KeyCode.Space;
+    KeyCode interact = KeyCode.E;
    
 
     //--------------------------------------------------------------------------------------------------------------------------
@@ -148,8 +148,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //--------------------------------------------------------------------------------------------------------------------------
+        if (Input.GetKey(interact))
+        {
 
-        if (Physics.Raycast(rb.transform.position, Vector3.down, out floor, groundDist))
+        }
+            //--------------------------------------------------------------------------------------------------------------------------
+            //figuring out what this does
+            if (Physics.Raycast(rb.transform.position, Vector3.down, out floor, groundDist))
         {
             inAir = false;
         }
