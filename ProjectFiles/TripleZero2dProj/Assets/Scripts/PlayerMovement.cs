@@ -38,14 +38,22 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         Clothes = new List<string>(capacity:2);
-        Clothes[0] = "DapperCapper";
-        Clothes[1] = "Null";
+        Clothes.Add("DapperCapper");
+        Clothes.Add("Null");
     }
 
     //--------------------------------------------------------------------------------------------------------------------------
     void Update()
     {
-        Debug.Log(canInteract + " " + interactObject);
+        /**
+        for (int i = 0; i < Clothes.Count; i++)
+        {
+            Debug.Log(message: i + " " + Clothes[i]);
+        }
+        **/
+
+
+        //Debug.Log(canInteract + " " + interactObject);
 
         //setting movement values
         if (Input.GetKey(forward))
@@ -80,14 +88,11 @@ public class PlayerMovement : MonoBehaviour
                 //pickup new clothing
                 if (interactObject.tag == "Clothing")
                 {
-                    Clothes[1] = Clothes[0];
-                    Clothes[0] = gameObject.name;
-
-                    for (int i = 0; i < Clothes.Count; i++)
-                    {
-                        Debug.Log(message: i + " " + Clothes[i]);
-                    }
-
+                    Clothes.Add(interactObject.name);
+                    Clothes.Add(Clothes[0]);
+                    Clothes.Remove(Clothes[1]);
+                    Clothes.Remove(Clothes[0]);
+                    
                     //deactivate object and remove
                     interactObject.SetActive(false);
                     interactObject = null;

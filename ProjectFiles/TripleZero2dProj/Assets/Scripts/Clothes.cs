@@ -13,7 +13,7 @@ public class Clothes : MonoBehaviour
             pms = collision.gameObject.GetComponent <PlayerMovement>();
             pms.canInteract = true;
             pms.interactObject = this.gameObject;
-            Debug.Log("Kris why won't this work");
+            //Debug.Log("Kris why won't this work");
         }
     }
 
@@ -24,7 +24,7 @@ public class Clothes : MonoBehaviour
             pms = collision.gameObject.GetComponent<PlayerMovement>();
             pms.canInteract = false;
             pms.interactObject = null;
-            Debug.Log("You expect me to know?");
+            //Debug.Log("You expect me to know?");
         }
     }
 }
