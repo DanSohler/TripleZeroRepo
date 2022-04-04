@@ -32,13 +32,21 @@ public class PlayerMovement : MonoBehaviour
     //interact systems
 
     public bool canInteract = true;
-    private List<string> Clothes;
     public GameObject interactObject = null;
+    private List<string> Clothes;
 
+    private void Start()
+    {
+        Clothes = new List<string>(capacity:2);
+        Clothes[0] = "DapperCapper";
+        Clothes[1] = "Null";
+    }
 
     //--------------------------------------------------------------------------------------------------------------------------
     void Update()
     {
+        Debug.Log(canInteract + " " + interactObject);
+
         //setting movement values
         if (Input.GetKey(forward))
         {  

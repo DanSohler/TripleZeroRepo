@@ -6,23 +6,25 @@ public class Clothes : MonoBehaviour
 {
     private PlayerMovement pms;
 
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Player")
+        if(collision.transform.tag == "Player")
         {
-            pms = collision.gameObject.GetComponent<PlayerMovement>();
+            pms = collision.gameObject.GetComponent <PlayerMovement>();
             pms.canInteract = true;
             pms.interactObject = this.gameObject;
+            Debug.Log("Kris why won't this work");
         }
     }
 
-    void OnCollisionExit (Collision collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.transform.tag == "Player")
         {
             pms = collision.gameObject.GetComponent<PlayerMovement>();
             pms.canInteract = false;
             pms.interactObject = null;
+            Debug.Log("You expect me to know?");
         }
     }
 }
