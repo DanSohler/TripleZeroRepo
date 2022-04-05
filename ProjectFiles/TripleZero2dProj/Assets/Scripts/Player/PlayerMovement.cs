@@ -39,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     private float swapDelay;
     private bool canSwap;
 
+    //--------------------------------------------------------------------------------------------------------------------------
+    //Swap Clothes restrictions
+    public InteractableObject IOs;
 
     //--------------------------------------------------------------------------------------------------------------------------
     //interact systems
@@ -52,6 +55,11 @@ public class PlayerMovement : MonoBehaviour
         Clothes = new List<string>(capacity:2);
         Clothes.Add("DapperCapper");
         Clothes.Add("Null");
+    }
+
+    private void Awake()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
     //--------------------------------------------------------------------------------------------------------------------------
@@ -123,7 +131,8 @@ public class PlayerMovement : MonoBehaviour
                 //if it's not a clothing item
                 else
                 {
-
+                    IOs.Activate();
+                    //Debug.Log(IOs);
                 }
             }
         }
@@ -148,21 +157,12 @@ public class PlayerMovement : MonoBehaviour
                 canSwap = false;
                 swapDelay = 1f;
 
-                for (int i = 0; i < Clothes.Count; i++)
+                /* for (int i = 0; i < Clothes.Count; i++)
                 {
                     Debug.Log(message: i + " " + Clothes[i]);
-                }
+                } */
             }
         }
-    }
-
-
-    //--------------------------------------------------------------------------------------------------------------------------
-
-    //Clothes list sets the clothes abilities
-    private void clothesFinder()
-    {
-
     }
 
     //--------------------------------------------------------------------------------------------------------------------------
