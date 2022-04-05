@@ -65,8 +65,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        Clothes = new List<string>(capacity:2);
-        Clothes.Add("Sneakers");
+        Clothes = new List<string>();
+        Clothes.Add("Null");
         Clothes.Add("Null");
     }
 
