@@ -230,6 +230,11 @@ MonoBehaviour:
   backwards: 97
   jump: 119
   interact: 101
+  clothingAbility: 115
+  swapClothes: 113
   runSpeed: 1000
+  canClimb: 0
+  rb: {fileID: 2862558696806367929}
+  IOs: {fileID: 0}
   canInteract: 1
   interactObject: {fileID: 0}

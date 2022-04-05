@@ -40,7 +40,17 @@ public class PlayerMovement : MonoBehaviour
     private bool canSwap;
 
     //--------------------------------------------------------------------------------------------------------------------------
-    //Swap Clothes restrictions
+    //Clothes Systems
+    [SerializeField]
+    private float climbSpeed = 2f;
+    [SerializeField]
+    private Rigidbody2D rb;
+    public bool canClimb;
+
+
+
+    //--------------------------------------------------------------------------------------------------------------------------
+    //Levers and Buttons Requirements
     public InteractableObject IOs;
 
     //--------------------------------------------------------------------------------------------------------------------------
@@ -53,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         Clothes = new List<string>(capacity:2);
-        Clothes.Add("DapperCapper");
+        Clothes.Add("Sweat_Bands");
         Clothes.Add("Null");
     }
 
@@ -140,7 +150,29 @@ public class PlayerMovement : MonoBehaviour
         //use ability
         if (Input.GetKey(clothingAbility))
         {
-            
+            if (Clothes[0] == "Sweat_Bands")
+            {
+                if (canClimb == true)
+                {
+                    rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+                    if (Input.GetKey(jump))
+                    {
+                        this.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + (climbSpeed * Time.deltaTime), transform.position.z);
+                    }
+                }
+                else if (canClimb == false)
+                {
+                    rb.constraints = RigidbodyConstraints2D.None;
+                    rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
+
+            }
+        }
+        else if (rb.constraints == RigidbodyConstraints2D.FreezePositionY)
+        {
+            rb.constraints = RigidbodyConstraints2D.None;
+
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
         //--------------------------------------------------------------------------------------------------------------------------
