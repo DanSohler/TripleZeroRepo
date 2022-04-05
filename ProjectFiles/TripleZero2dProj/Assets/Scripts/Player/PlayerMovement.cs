@@ -21,12 +21,37 @@ public class PlayerMovement : MonoBehaviour
     //interact key
     [SerializeField]
     KeyCode interact = KeyCode.E;
+    //clothing use key
+    [SerializeField]
+    KeyCode clothingAbility = KeyCode.S;
+    //swap active clothes key
+    [SerializeField]
+    KeyCode swapClothes = KeyCode.Q;
     //--------------------------------------------------------------------------------------------------------------------------
-
+    //movement veriables
     [SerializeField]
     private float runSpeed = 40f;
     private float horizontalMove = 0f;
     private bool jumping = false;
+
+    //--------------------------------------------------------------------------------------------------------------------------
+    //Swap Clothes restrictions
+    private float swapDelay;
+    private bool canSwap;
+
+    //--------------------------------------------------------------------------------------------------------------------------
+    //Clothes Systems
+    [SerializeField]
+    private float climbSpeed = 2f;
+    [SerializeField]
+    private Rigidbody2D rb;
+    public bool canClimb;
+
+
+
+    //--------------------------------------------------------------------------------------------------------------------------
+    //Levers and Buttons Requirements
+    public InteractableObject IOs;
 
     //--------------------------------------------------------------------------------------------------------------------------
     //interact systems
@@ -38,13 +63,29 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         Clothes = new List<string>(capacity:2);
-        Clothes.Add("DapperCapper");
+        Clothes.Add("Sweat_Bands");
         Clothes.Add("Null");
+    }
+
+    private void Awake()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
     //--------------------------------------------------------------------------------------------------------------------------
     void Update()
     {
+        //Reducing swap clothes timer
+        if (swapDelay > 0)
+        {
+            swapDelay -= Time.deltaTime;
+        }
+        else
+        {
+            canSwap = true;
+        }
+
+        //--------------------------------------------------------------------------------------------------------------------------
         /**
         for (int i = 0; i < Clothes.Count; i++)
         {
@@ -100,19 +141,60 @@ public class PlayerMovement : MonoBehaviour
                 //if it's not a clothing item
                 else
                 {
-
+                    IOs.Activate();
+                    //Debug.Log(IOs);
                 }
             }
         }
-    }
+        //--------------------------------------------------------------------------------------------------------------------------
+        //use ability
+        if (Input.GetKey(clothingAbility))
+        {
+            if (Clothes[0] == "Sweat_Bands")
+            {
+                if (canClimb == true)
+                {
+                    rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+                    if (Input.GetKey(jump))
+                    {
+                        this.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + (climbSpeed * Time.deltaTime), transform.position.z);
+                    }
+                }
+                else if (canClimb == false)
+                {
+                    rb.constraints = RigidbodyConstraints2D.None;
+                    rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
 
+            }
+        }
+        else if (rb.constraints == RigidbodyConstraints2D.FreezePositionY)
+        {
+            rb.constraints = RigidbodyConstraints2D.None;
 
-    //--------------------------------------------------------------------------------------------------------------------------
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
 
-    //Clothes list sets the clothes abilities
-    private void clothesFinder()
-    {
+        //--------------------------------------------------------------------------------------------------------------------------
+        //swap active clothes
+        if (Input.GetKey(swapClothes))
+        {
+            if (canSwap == true)
+            {
+                Clothes.Add(Clothes[1]);
+                Clothes.Add(Clothes[0]);
+                Clothes.Remove(Clothes[1]);
+                Clothes.Remove(Clothes[0]);
 
+                canSwap = false;
+                swapDelay = 1f;
+
+                /* for (int i = 0; i < Clothes.Count; i++)
+                {
+                    Debug.Log(message: i + " " + Clothes[i]);
+                } */
+            }
+        }
     }
 
     //--------------------------------------------------------------------------------------------------------------------------
