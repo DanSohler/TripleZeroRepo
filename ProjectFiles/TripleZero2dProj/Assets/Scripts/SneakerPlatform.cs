@@ -13,7 +13,6 @@ public class SneakerPlatform : MonoBehaviour
 
         if (deathTimer < 0)
         {
-            Destroy(this.GetComponentInChildren<GameObject>());
             Destroy(this.gameObject);
         }
     }
