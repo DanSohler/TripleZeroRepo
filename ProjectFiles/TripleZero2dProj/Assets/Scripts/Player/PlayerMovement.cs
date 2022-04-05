@@ -47,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     public bool canClimb;
 
+    [SerializeField]
+    private Transform prefab;
+    private float canPlace;
 
 
     //--------------------------------------------------------------------------------------------------------------------------
@@ -63,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         Clothes = new List<string>(capacity:2);
-        Clothes.Add("Sweat_Bands");
+        Clothes.Add("Sneakers");
         Clothes.Add("Null");
     }
 
@@ -75,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
     //--------------------------------------------------------------------------------------------------------------------------
     void Update()
     {
+
         //Reducing swap clothes timer
         if (swapDelay > 0)
         {
@@ -83,6 +87,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             canSwap = true;
+        }
+
+        if (canPlace > 0)
+        {
+            canPlace -= Time.deltaTime;
         }
 
         //--------------------------------------------------------------------------------------------------------------------------
@@ -165,7 +174,15 @@ public class PlayerMovement : MonoBehaviour
                     rb.constraints = RigidbodyConstraints2D.None;
                     rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
-
+            }
+            else if (Clothes[0] == "Sneakers")
+            {
+                if (canPlace <= 0)
+                {
+                    canPlace = 1;
+                    Debug.Log("hi");
+                    Instantiate(prefab, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
+                }
             }
         }
         else if (rb.constraints == RigidbodyConstraints2D.FreezePositionY)
