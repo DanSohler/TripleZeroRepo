@@ -133,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(interact))
         {
+            //Debug.Log("Why Chara");
             if (canInteract == true)
             {
                 //pickup new clothing
