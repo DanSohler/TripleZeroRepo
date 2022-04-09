@@ -11,8 +11,11 @@ public class InteractableObject : MonoBehaviour
     private GameObject Object1 = null;
     [SerializeField]
     private GameObject Object2 = null;
+    [SerializeField]
+    private GameObject Object3 = null;
     private bool ObjectActive1 = true;
     private bool ObjectActive2 = true;
+    private bool ObjectActive3 = true;
 
 
     private float resetDelay;
@@ -31,7 +34,11 @@ public class InteractableObject : MonoBehaviour
             }
             if (Object2 != null)
             {
-                Object1.SetActive(ObjectActive2);
+                Object2.SetActive(ObjectActive2);
+            }
+            if (Object3 != null)
+            {
+                Object3.SetActive(ObjectActive3);
             }
         }
     }
@@ -76,8 +83,13 @@ public class InteractableObject : MonoBehaviour
             }
             if (Object2 != null)
             {
-                Object1.SetActive(!ObjectActive2);
+                Object2.SetActive(!ObjectActive2);
                 ObjectActive2 = (!ObjectActive2);
+            }
+            if (Object3 != null)
+            {
+                Object3.SetActive(!ObjectActive3);
+                ObjectActive3 = (!ObjectActive3);
             }
 
         }
@@ -89,7 +101,11 @@ public class InteractableObject : MonoBehaviour
             }
             if (Object2 != null)
             {
-                Object1.SetActive(!ObjectActive2);
+                Object2.SetActive(!ObjectActive2);
+            }
+            if (Object2 != null)
+            {
+                Object3.SetActive(!ObjectActive3);
             }
 
             resetDelay = 0.2f;
