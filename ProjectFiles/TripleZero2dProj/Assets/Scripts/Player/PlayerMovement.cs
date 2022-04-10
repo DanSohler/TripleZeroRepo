@@ -158,14 +158,16 @@ public class PlayerMovement : MonoBehaviour
         }
         //--------------------------------------------------------------------------------------------------------------------------
         //use ability
-        if (Input.GetKey(clothingAbility))
-        {
+        //if (Input.GetKey(clothingAbility))
+            if (Input.GetKey(KeyCode.Q))
+            {
             if (Clothes[0] == "Sweat_Bands")
             {
                 if (canClimb == true)
                 {
                     rb.constraints = RigidbodyConstraints2D.FreezePositionY;
-                    if (Input.GetKey(jump))
+                    //if (Input.GetKey(jump))
+                    if (Input.GetKey(KeyCode.W))
                     {
                         this.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + (climbSpeed * Time.deltaTime), transform.position.z);
                     }
