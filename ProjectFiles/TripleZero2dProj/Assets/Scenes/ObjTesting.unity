@@ -388,7 +388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367932, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: forward
-      value: 106
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367932, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: interact
@@ -400,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367932, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: backwards
-      value: 108
+      value: 106
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367932, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: swapClothes
