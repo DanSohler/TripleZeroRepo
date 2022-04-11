@@ -23,10 +23,13 @@ public class PlayerMovement : MonoBehaviour
     KeyCode interact = KeyCode.E;
     //clothing use key
     [SerializeField]
-    KeyCode clothingAbility = KeyCode.S;
+    KeyCode clothingAbility = KeyCode.Q;
     //swap active clothes key
     [SerializeField]
-    KeyCode swapClothes = KeyCode.Q;
+    KeyCode swapClothes = KeyCode.S;
+    //Pause button
+    [SerializeField]
+    KeyCode pauseButton = KeyCode.Space;
     //--------------------------------------------------------------------------------------------------------------------------
     //movement veriables
     [SerializeField]
@@ -40,6 +43,12 @@ public class PlayerMovement : MonoBehaviour
     private bool canSwap;
 
     //--------------------------------------------------------------------------------------------------------------------------
+    //pause menu system
+    [SerializeField]
+    private GameManager gm;
+
+
+    //--------------------------------------------------------------------------------------------------------------------------
     //Clothes Systems
     [SerializeField]
     private float climbSpeed = 2f;
@@ -50,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform prefab;
     private float canPlace;
-
 
     //--------------------------------------------------------------------------------------------------------------------------
     //Levers and Buttons Requirements
@@ -212,6 +220,11 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log(message: i + " " + Clothes[i]);
                 } */
             }
+        }
+
+        if (Input.GetKey(pauseButton))
+        {
+            gm.PauseMenu();
         }
     }
 
