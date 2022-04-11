@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowCam : MonoBehaviour
 {
-    public float followSpeed = 2f;
+    public float followSpeed = 8f;
     public float yOffset = 1f;
     public Transform target;
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Clothing
   - Floor
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
