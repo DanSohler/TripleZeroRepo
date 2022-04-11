@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4294792318279759664, guid: 47eaa489820d475429db7cc328faea60, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4294792318279759664, guid: 47eaa489820d475429db7cc328faea60, type: 3}
       propertyPath: m_LocalPosition.x
@@ -212,6 +212,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &763956135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2862558696806367910, guid: 981288806cc0666449b02689f5627e4e, type: 3}
+  m_PrefabInstance: {fileID: 1746445981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &763956137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2862558696806367933, guid: 981288806cc0666449b02689f5627e4e, type: 3}
+  m_PrefabInstance: {fileID: 1746445981}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763956135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefe58baf06312646881f80e911b2bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &763956141 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2862558696806367930, guid: 981288806cc0666449b02689f5627e4e, type: 3}
@@ -226,7 +242,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5749592410750775857, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5749592410750775857, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
       propertyPath: m_LocalScale.x
@@ -272,6 +288,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5749592410750775861, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
+      propertyPath: pms
+      value: 
+      objectReference: {fileID: 763956137}
+    - target: {fileID: 5749592410750775861, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
+      propertyPath: playerObj
+      value: 
+      objectReference: {fileID: 763956135}
     - target: {fileID: 5749592410750775862, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
       propertyPath: m_Name
       value: DeathBox Test (1)
@@ -491,7 +515,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -515,7 +539,7 @@ Transform:
   m_LocalScale: {x: 67.64102, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1044039031
 BoxCollider2D:
@@ -624,7 +648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 11.4306, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1113944631
 BoxCollider2D:
@@ -661,7 +685,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5749592410750775857, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5749592410750775857, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
       propertyPath: m_LocalScale.x
@@ -707,6 +731,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5749592410750775861, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
+      propertyPath: pms
+      value: 
+      objectReference: {fileID: 763956137}
+    - target: {fileID: 5749592410750775861, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
+      propertyPath: playerObj
+      value: 
+      objectReference: {fileID: 763956135}
     - target: {fileID: 5749592410750775862, guid: 6fa1ecce39ff88f408375f274ee9bcdd, type: 3}
       propertyPath: m_Name
       value: DeathBox Test
@@ -783,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367930, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367930, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -846,7 +878,7 @@ GameObject:
   - component: {fileID: 2093596974}
   - component: {fileID: 2093596975}
   m_Layer: 0
-  m_Name: Checkpoint_
+  m_Name: Checkpoint_1
   m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
