@@ -25,7 +25,7 @@ public class CharacterController2D : MonoBehaviour
 	public UnityEvent OnLandEvent;
 
 	// Variables for Checkpoints
-	[SerializeField] public Vector3 respawnPoint;
+	//[SerializeField] public Vector3 respawnPoint;
 
 
 	[System.Serializable]
@@ -45,7 +45,7 @@ public class CharacterController2D : MonoBehaviour
 			OnCrouchEvent = new BoolEvent();
 		
 		// sets respawn point at level start
-		respawnPoint = transform.position;
+		//respawnPoint = transform.position;
 	}
 
 	private void FixedUpdate()
