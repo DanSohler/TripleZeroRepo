@@ -37,4 +37,8 @@ public class GameManager : MonoBehaviour
         resume.gameObject.SetActive(!resume.IsActive());
         quit.gameObject.SetActive(!quit.IsActive());
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

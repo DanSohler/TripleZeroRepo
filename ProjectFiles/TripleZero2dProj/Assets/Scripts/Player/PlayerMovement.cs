@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     //pause menu system
     [SerializeField]
     private GameManager gm;
+    private float menuOpenLimit = 0;
 
 
     //--------------------------------------------------------------------------------------------------------------------------
@@ -101,7 +102,10 @@ public class PlayerMovement : MonoBehaviour
         {
             canPlace -= Time.deltaTime;
         }
-
+        if (menuOpenLimit > 0)
+        {
+            menuOpenLimit -= Time.deltaTime;
+        }
         //--------------------------------------------------------------------------------------------------------------------------
         /**
         for (int i = 0; i < Clothes.Count; i++)
@@ -224,7 +228,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(pauseButton))
         {
-            gm.PauseMenu();
+            if (menuOpenLimit <= 0)
+            {
+                gm.PauseMenu();
+                menuOpenLimit = 0.5f;
+            }
         }
     }
 
