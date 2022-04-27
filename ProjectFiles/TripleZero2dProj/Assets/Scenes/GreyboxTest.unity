@@ -42241,6 +42241,10 @@ PrefabInstance:
       propertyPath: Object1
       value: 
       objectReference: {fileID: 366748846}
+    - target: {fileID: 4219566748725501977, guid: bf4c37f972ab17f439d104ce2f8264c0, type: 3}
+      propertyPath: Object2
+      value: 
+      objectReference: {fileID: 518861251}
     - target: {fileID: 4219566748725501979, guid: bf4c37f972ab17f439d104ce2f8264c0, type: 3}
       propertyPath: m_Size.x
       value: 4.464856
@@ -42983,6 +42987,10 @@ PrefabInstance:
       propertyPath: Object2
       value: 
       objectReference: {fileID: 1917382640}
+    - target: {fileID: 2250095590692151638, guid: bd1571657fe5b1e4688acbe82c4f665c, type: 3}
+      propertyPath: Object3
+      value: 
+      objectReference: {fileID: 366748846}
     - target: {fileID: 3001355776369438666, guid: bd1571657fe5b1e4688acbe82c4f665c, type: 3}
       propertyPath: m_Size.x
       value: 0.2107345
