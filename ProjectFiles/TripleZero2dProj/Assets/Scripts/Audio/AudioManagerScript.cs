@@ -22,6 +22,12 @@ public class AudioManagerScript : MonoBehaviour
 
         }
     }
+
+    private void Start()
+    {
+        Play("BGM_Music");
+        Play("BGM_Forest");
+    }
     // function that will be called in other scripts to call upon sounds to be played
     public void Play(string name)
     {

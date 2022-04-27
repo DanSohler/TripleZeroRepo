@@ -17,6 +17,9 @@ public class InteractableObject : MonoBehaviour
     private bool ObjectActive2 = true;
     private bool ObjectActive3 = true;
 
+    public Sprite idleSprite;
+    public Sprite activeSprite;
+
 
     private float resetDelay;
 

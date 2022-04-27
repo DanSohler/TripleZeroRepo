@@ -72,6 +72,11 @@ public class PlayerMovement : MonoBehaviour
     public GameObject interactObject = null;
     private List<string> Clothes;
 
+    public Sprite sneakerSprite;
+    public Sprite runnerSprite;
+    
+
+
     private void Start()
     {
         Clothes = new List<string>();

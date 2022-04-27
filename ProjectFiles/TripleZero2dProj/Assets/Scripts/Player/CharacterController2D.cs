@@ -34,6 +34,12 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
+	// Audio reference
+	public GameObject audioManager;
+	private AudioManagerScript amScript;
+	private bool sfxPlayed;
+	private float randomJumpNo;
+
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -47,8 +53,14 @@ public class CharacterController2D : MonoBehaviour
 		// sets respawn point at level start
 		//respawnPoint = transform.position;
 	}
+    private void Start()
+    {
 
-	private void FixedUpdate()
+
+		amScript = audioManager.GetComponent<AudioManagerScript>();
+	}
+
+    private void FixedUpdate()
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
@@ -136,6 +148,16 @@ public class CharacterController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+
+			randomJumpNo = Random.Range(0, 2);
+			if (randomJumpNo == 0)
+			{
+				amScript.Play("SFX_Jump1");
+			}
+			if (randomJumpNo == 1)
+			{
+				amScript.Play("SFX_Jump2");
+			} 
 		}
 	}
 
