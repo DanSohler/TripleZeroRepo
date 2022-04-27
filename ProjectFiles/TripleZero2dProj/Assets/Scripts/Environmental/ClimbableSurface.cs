@@ -5,6 +5,8 @@ using UnityEngine;
 public class ClimbableSurface : MonoBehaviour
 {
     private PlayerMovement pms;
+    [SerializeField]
+    private bool isRope;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,6 +14,7 @@ public class ClimbableSurface : MonoBehaviour
         {
             pms = collision.gameObject.GetComponent<PlayerMovement>();
             pms.canClimb = true;
+            pms.isRope = isRope;
             //Debug.Log("In");
         }
     }
@@ -22,6 +25,7 @@ public class ClimbableSurface : MonoBehaviour
         {
             pms = collision.gameObject.GetComponent<PlayerMovement>();
             pms.canClimb = false;
+            pms.isRope = false;
             //Debug.Log("Away");
         }
     }

@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     private float climbSpeed = 2f;
     [SerializeField]
     private Rigidbody2D rb;
-    public bool canClimb;
+    public bool canClimb, isRope;
 
     [SerializeField]
     private Transform prefab;
@@ -195,6 +195,14 @@ public class PlayerMovement : MonoBehaviour
                     canPlace = 5;
                     Debug.Log("hi");
                     Instantiate(prefab, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
+                }
+            }
+            else if (isRope == true)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+                if (Input.GetKey(jump))
+                {
+                    this.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + (climbSpeed * Time.deltaTime), transform.position.z);
                 }
             }
         }
