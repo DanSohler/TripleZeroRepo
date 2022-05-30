@@ -137,8 +137,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.60784316, g: 0.69101906, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9a0744c224dafd04b8bf2e76cac60d38, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -157,13 +157,13 @@ CircleCollider2D:
   m_GameObject: {fileID: 3840038876392051285}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a0d65db6c10d6194eb68be28e4a85826, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.025427919, y: -0.16799994}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.13399892
 --- !u!50 &3840038876392051274
 Rigidbody2D:
   serializedVersion: 4
@@ -197,13 +197,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefe58baf06312646881f80e911b2bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 170
+  m_JumpForce: 90
   m_CrouchSpeed: 0.2
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 31
   m_GroundCheck: {fileID: 3840038875915773465}
   m_CeilingCheck: {fileID: 3840038876380048602}
   m_CrouchDisableCollider: {fileID: 0}
@@ -213,6 +213,7 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
+  audioManager: {fileID: 0}
 --- !u!114 &3840038876392051279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,11 +233,16 @@ MonoBehaviour:
   interact: 111
   clothingAbility: 107
   swapClothes: 117
+  pauseButton: 32
   runSpeed: 400
+  gm: {fileID: 0}
   climbSpeed: 2
   rb: {fileID: 3840038876392051274}
   canClimb: 0
+  isRope: 0
   prefab: {fileID: 0}
   IOs: {fileID: 0}
   canInteract: 1
   interactObject: {fileID: 0}
+  sneakerSprite: {fileID: 0}
+  runnerSprite: {fileID: 0}

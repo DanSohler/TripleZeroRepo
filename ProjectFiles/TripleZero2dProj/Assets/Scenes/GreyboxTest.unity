@@ -44428,22 +44428,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2862558696806367928, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_Radius
-      value: 0.2303341
-      objectReference: {fileID: 0}
-    - target: {fileID: 2862558696806367928, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: a0d65db6c10d6194eb68be28e4a85826, type: 2}
-    - target: {fileID: 2862558696806367928, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.044512562
-      objectReference: {fileID: 0}
-    - target: {fileID: 2862558696806367928, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.13922994
-      objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367929, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: m_Material
       value: 
@@ -44512,22 +44496,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2862558696806367931, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d2e9db643e2caba4f801a86ae2ac27c4, type: 3}
-    - target: {fileID: 2862558696806367931, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2862558696806367931, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2862558696806367931, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367932, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: prefab
       value: 
@@ -44557,25 +44525,9 @@ PrefabInstance:
       value: 113
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367933, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_JumpForce
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2862558696806367933, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1883748133}
-    - target: {fileID: 2862558696806367933, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_CrouchSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2862558696806367933, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_MovementSmoothing
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 2862558696806367933, guid: 981288806cc0666449b02689f5627e4e, type: 3}
-      propertyPath: m_WhatIsGround.m_Bits
-      value: 31
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 981288806cc0666449b02689f5627e4e, type: 3}
 --- !u!1 &1641113250
@@ -45083,22 +45035,6 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3840038876392051272, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9a0744c224dafd04b8bf2e76cac60d38, type: 3}
-    - target: {fileID: 3840038876392051272, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3840038876392051272, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3840038876392051272, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3840038876392051273, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -45167,34 +45103,10 @@ PrefabInstance:
       propertyPath: m_SleepingMode
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3840038876392051275, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_Radius
-      value: 0.2303341
-      objectReference: {fileID: 0}
-    - target: {fileID: 3840038876392051275, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: a0d65db6c10d6194eb68be28e4a85826, type: 2}
-    - target: {fileID: 3840038876392051275, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.044512562
-      objectReference: {fileID: 0}
-    - target: {fileID: 3840038876392051275, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.13922994
-      objectReference: {fileID: 0}
-    - target: {fileID: 3840038876392051278, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_JumpForce
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 3840038876392051278, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1883748133}
-    - target: {fileID: 3840038876392051278, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
-      propertyPath: m_WhatIsGround.m_Bits
-      value: 31
-      objectReference: {fileID: 0}
     - target: {fileID: 3840038876392051279, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
       propertyPath: prefab
       value: 
@@ -46462,17 +46374,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1158038401}
     m_Modifications:
     - target: {fileID: 2250095590692151638, guid: bd1571657fe5b1e4688acbe82c4f665c, type: 3}
-      propertyPath: Object1
-      value: 
-      objectReference: {fileID: 518861251}
-    - target: {fileID: 2250095590692151638, guid: bd1571657fe5b1e4688acbe82c4f665c, type: 3}
       propertyPath: Object2
       value: 
       objectReference: {fileID: 1917382640}
-    - target: {fileID: 2250095590692151638, guid: bd1571657fe5b1e4688acbe82c4f665c, type: 3}
-      propertyPath: Object3
-      value: 
-      objectReference: {fileID: 366748846}
     - target: {fileID: 3001355776369438666, guid: bd1571657fe5b1e4688acbe82c4f665c, type: 3}
       propertyPath: m_Size.x
       value: 0.2107345
