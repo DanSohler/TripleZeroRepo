@@ -76,6 +76,7 @@ public class InteractableObject : MonoBehaviour
         {
 
             //Debug.Log("Yeet");
+            //is lever
 
             resetDelay = 0.5f;
 
@@ -98,6 +99,8 @@ public class InteractableObject : MonoBehaviour
         }
         else if (isButton == true && resetDelay <= 0)
         {
+            //is button
+
             if (Object1 != null)
             {
                 Object1.SetActive(!ObjectActive1);
@@ -106,12 +109,12 @@ public class InteractableObject : MonoBehaviour
             {
                 Object2.SetActive(!ObjectActive2);
             }
-            if (Object2 != null)
+            if (Object3 != null)
             {
                 Object3.SetActive(!ObjectActive3);
             }
 
-            resetDelay = 0.2f;
+            resetDelay = 0.20f;
         }
 
     }

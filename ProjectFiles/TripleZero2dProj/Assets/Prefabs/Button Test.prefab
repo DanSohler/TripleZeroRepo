@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4219566748725501981}
   - component: {fileID: 4219566748725501980}
   - component: {fileID: 4219566748725501979}
-  - component: {fileID: 4219566748725501978}
   - component: {fileID: 4219566748725501977}
   m_Layer: 0
   m_Name: Button Test
@@ -111,27 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!50 &4219566748725501978
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4219566748725501976}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!114 &4219566748725501977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +125,6 @@ MonoBehaviour:
   isButton: 1
   Object1: {fileID: 0}
   Object2: {fileID: 0}
+  Object3: {fileID: 0}
+  idleSprite: {fileID: 0}
+  activeSprite: {fileID: 0}

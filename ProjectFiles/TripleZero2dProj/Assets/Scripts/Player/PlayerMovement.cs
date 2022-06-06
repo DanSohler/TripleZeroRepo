@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
     //--------------------------------------------------------------------------------------------------------------------------
     void Update()
     {
+        this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         //Reducing swap clothes timer
         if (swapDelay > 0)
