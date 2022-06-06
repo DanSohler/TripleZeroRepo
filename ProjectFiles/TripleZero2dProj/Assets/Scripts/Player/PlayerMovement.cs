@@ -199,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
                 if (canPlace <= 0)
                 {
                     canPlace = 5;
-                    Debug.Log("hi");
+                    //Debug.Log("hi");
                     Instantiate(prefab, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
                 }
             }
@@ -220,25 +220,27 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //--------------------------------------------------------------------------------------------------------------------------
-        //swap active clothes
-        if (Input.GetKey(swapClothes))
-        {
-            if (canSwap == true)
+        /*
+            //swap active clothes
+            if (Input.GetKey(swapClothes))
             {
-                Clothes.Add(Clothes[1]);
-                Clothes.Add(Clothes[0]);
-                Clothes.Remove(Clothes[1]);
-                Clothes.Remove(Clothes[0]);
-
-                canSwap = false;
-                swapDelay = 1f;
-
-                /* for (int i = 0; i < Clothes.Count; i++)
+                if (canSwap == true)
                 {
-                    Debug.Log(message: i + " " + Clothes[i]);
-                } */
+                    Clothes.Add(Clothes[1]);
+                    Clothes.Add(Clothes[0]);
+                    Clothes.Remove(Clothes[1]);
+                    Clothes.Remove(Clothes[0]);
+
+                    canSwap = false;
+                    swapDelay = 1f;
+
+                    /* for (int i = 0; i < Clothes.Count; i++)
+                    {
+                        Debug.Log(message: i + " " + Clothes[i]);
+                    } *//*
+                }
             }
-        }
+            */
 
         if (Input.GetKey(pauseButton))
         {
