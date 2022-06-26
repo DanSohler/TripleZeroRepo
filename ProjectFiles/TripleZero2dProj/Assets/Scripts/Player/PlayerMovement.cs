@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -74,9 +75,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Sprite sneakerSprite;
     public Sprite runnerSprite;
-    
 
-
+    [SerializeField]
+    private Text clothingText;
     private void Start()
     {
         Clothes = new List<string>();
@@ -161,7 +162,9 @@ public class PlayerMovement : MonoBehaviour
                     Clothes.Add(Clothes[0]);
                     Clothes.Remove(Clothes[1]);
                     Clothes.Remove(Clothes[0]);
-                    
+
+                    clothingText.text = Clothes[0];
+
                     //deactivate object and remove
                     interactObject.SetActive(false);
                     interactObject = null;
@@ -220,7 +223,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //--------------------------------------------------------------------------------------------------------------------------
-        /*
             //swap active clothes
             if (Input.GetKey(swapClothes))
             {
@@ -234,13 +236,15 @@ public class PlayerMovement : MonoBehaviour
                     canSwap = false;
                     swapDelay = 1f;
 
-                    /* for (int i = 0; i < Clothes.Count; i++)
-                    {
-                        Debug.Log(message: i + " " + Clothes[i]);
-                    } *//*
-                }
+
+                    clothingText.text = Clothes[0];
+
+                /* for (int i = 0; i < Clothes.Count; i++)
+                {
+                    Debug.Log(message: i + " " + Clothes[i]);
+                } */
             }
-            */
+        }
 
         if (Input.GetKey(pauseButton))
         {
