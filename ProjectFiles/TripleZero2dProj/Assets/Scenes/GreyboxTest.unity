@@ -39857,7 +39857,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3461334, y: 1.2269946}
+  m_Size: {x: 2.46, y: 1.2269946}
   m_EdgeRadius: 0
 --- !u!212 &482009971
 SpriteRenderer:
@@ -39936,8 +39936,16 @@ PrefabInstance:
       value: Climbable Wall (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
+      propertyPath: m_Size.x
+      value: 5.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
       propertyPath: m_Size.y
       value: 1.0426619
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
+      propertyPath: m_Offset.x
+      value: -1.37
       objectReference: {fileID: 0}
     - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
       propertyPath: m_Offset.y
@@ -41037,7 +41045,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3461334, y: 1.0210268}
+  m_Size: {x: 2.46, y: 1.0210268}
   m_EdgeRadius: 0
 --- !u!212 &639416329
 SpriteRenderer:
@@ -43805,6 +43813,10 @@ PrefabInstance:
       value: Climbable Wall
       objectReference: {fileID: 0}
     - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
+      propertyPath: m_Size.x
+      value: 4.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
       propertyPath: m_Size.y
       value: 1.0959044
       objectReference: {fileID: 0}
@@ -44712,7 +44724,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3461334, y: 1.012815}
+  m_Size: {x: 2.46, y: 1.012815}
   m_EdgeRadius: 0
 --- !u!212 &1351258018
 SpriteRenderer:
@@ -45744,7 +45756,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3461334, y: 0.6754687}
+  m_Size: {x: 2.46, y: 0.6754687}
   m_EdgeRadius: 0
 --- !u!212 &1451242460
 SpriteRenderer:
@@ -49018,8 +49030,16 @@ PrefabInstance:
       value: Climbable Wall (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
+      propertyPath: m_Size.x
+      value: 5.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
       propertyPath: m_Size.y
       value: 1.0222907
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
+      propertyPath: m_Offset.x
+      value: -1.83
       objectReference: {fileID: 0}
     - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
       propertyPath: m_Offset.y
@@ -49542,8 +49562,16 @@ PrefabInstance:
       value: Climbable Wall (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
+      propertyPath: m_Size.x
+      value: 5.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
       propertyPath: m_Size.y
       value: 1.0679626
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 7329373457116630453, guid: 6aa3365e480d4a542a39d187a9fb5af3, type: 3}
       propertyPath: m_Offset.y
