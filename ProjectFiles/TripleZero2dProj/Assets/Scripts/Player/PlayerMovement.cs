@@ -248,12 +248,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(pauseButton))
         {
-            if (menuOpenLimit <= 0)
-            {
-                gm.PauseMenu();
-                menuOpenLimit = 0.5f;
-            }
+            gm.OpenPauseMenu();
         }
+                
     }
 
     //--------------------------------------------------------------------------------------------------------------------------

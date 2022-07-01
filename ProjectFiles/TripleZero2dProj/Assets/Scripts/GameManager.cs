@@ -6,37 +6,29 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private Text pauseText;
-    [SerializeField]
-    private Image instructionImage;
-    [SerializeField]
-    private Button resume;
-    [SerializeField]
-    private Button quit;
+    private GameObject instructionImage;
+    public bool pauseActive = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        pauseText.gameObject.SetActive(false);
         instructionImage.gameObject.SetActive(false);
-        resume.gameObject.SetActive(false);
-        quit.gameObject.SetActive(false);
+        pauseActive = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenPauseMenu()
     {
-        
+        instructionImage.gameObject.SetActive(true);
+        pauseActive = true;
     }
 
-    public void PauseMenu ()
+    public void ClosePauseMenu()
     {
-        pauseText.gameObject.SetActive(!pauseText.IsActive());
-        instructionImage.gameObject.SetActive(!instructionImage.IsActive());
-        resume.gameObject.SetActive(!resume.IsActive());
-        quit.gameObject.SetActive(!quit.IsActive());
+        instructionImage.gameObject.SetActive(false);
+        pauseActive = false;
     }
+
     public void QuitGame()
     {
         Application.Quit();
