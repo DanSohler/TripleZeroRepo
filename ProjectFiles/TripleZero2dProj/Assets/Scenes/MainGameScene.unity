@@ -43918,7 +43918,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.34509805, g: 0.5529412, b: 0.74509805, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -49262,11 +49262,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367930, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.44
+      value: -12.33
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367930, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.05
+      value: 2.99
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367930, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -49343,6 +49343,10 @@ PrefabInstance:
     - target: {fileID: 2862558696806367932, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: clothingAbility
       value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862558696806367933, guid: 981288806cc0666449b02689f5627e4e, type: 3}
+      propertyPath: m_JumpForce
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 2862558696806367933, guid: 981288806cc0666449b02689f5627e4e, type: 3}
       propertyPath: audioManager
@@ -49975,6 +49979,10 @@ PrefabInstance:
     - target: {fileID: 3840038876392051274, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
       propertyPath: m_SleepingMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840038876392051278, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
+      propertyPath: m_JumpForce
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 3840038876392051278, guid: 387a5cac7dcbc3142ab862925206e41a, type: 3}
       propertyPath: audioManager
