@@ -201,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (canPlace <= 0)
                 {
-                    canPlace = 5;
+                    canPlace = 2;
                     //Debug.Log("hi");
                     Instantiate(prefab, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
                 }
